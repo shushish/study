@@ -1,0 +1,35 @@
+package design;
+
+public class Single {
+	private static Single single;
+	
+	private Single() {}
+	
+	public static Single getInstance2() {
+		if(single==null){
+			single = new Single();
+		}
+		return single;
+	}
+	
+	/*
+	 * 同步的地方只是需要发生在单例的实例还未创建的时候，在实例创建以后，获取实例的方法就没必要再进行同步控制了
+	 * */
+	public synchronized static Single getInstance1() {
+		if(single==null){
+			single = new Single();
+		}
+		return single;
+	}
+
+	public static Single getInstance() {
+		if(single==null){
+			synchronized(Single.class){
+				//if(single==null){
+					single = new Single();
+				//}
+			}	
+		}
+		return single;
+	}
+}
