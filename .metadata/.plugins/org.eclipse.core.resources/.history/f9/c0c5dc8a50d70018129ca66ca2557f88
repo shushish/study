@@ -1,0 +1,8 @@
+package factoryEasy;
+
+public class ServletFactory {
+
+	private ServletFactory() {
+		// TODO Auto-generated constructor stub
+	}
+}

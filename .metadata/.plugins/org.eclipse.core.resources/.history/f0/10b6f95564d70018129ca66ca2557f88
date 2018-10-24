@@ -1,0 +1,6 @@
+package factory;
+
+public interface Creator {
+	
+	public Light createLight(){};
+}

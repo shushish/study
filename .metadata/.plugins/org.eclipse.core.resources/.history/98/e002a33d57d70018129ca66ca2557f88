@@ -1,0 +1,15 @@
+package factory;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Creator cre=new CreateFirLight();
+		Light light=cre.createLight();
+		light.turnOn();
+		light.turnOff();
+		
+		
+	}
+
+}

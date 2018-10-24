@@ -1,0 +1,46 @@
+package prototype;
+
+public class Test implements Cloneable{
+	private int a;
+	private int b;
+	private int[] array={1,2,3};
+	private Field field;
+
+	public Test(){
+		System.out.println("对象构造中。。。");
+		this.a=2;
+		this.b=3;
+		this.field=new Field();
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		//return super.toString();
+		return this.a+","+this.b+","+this.array+":"+field.toString();
+	}
+	
+	public Test clone(){
+		Object obj=null;
+		try {
+			obj=super.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return (Test)obj;
+	}
+	
+	public Test deepClone(){
+		Test obj=null;
+		try {
+			obj=super.clone();
+			(Test)
+			((Test)obj).field=this.field.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return (Test)obj;
+	}
+}

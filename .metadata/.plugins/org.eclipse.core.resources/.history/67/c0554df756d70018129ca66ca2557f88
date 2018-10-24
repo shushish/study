@@ -1,0 +1,13 @@
+package factory;
+
+public class CreateSecLight implements Creator{
+
+	private CreateSecLight() {}
+		
+	@Override
+	public static Light createLight() {
+		// TODO Auto-generated method stub
+		return new SecLight();
+	}
+
+}

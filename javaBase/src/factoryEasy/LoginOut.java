@@ -1,0 +1,10 @@
+package factoryEasy;
+
+public class LoginOut implements Servlet{
+
+	@Override
+	public void doSomthing() {
+		// TODO Auto-generated method stub
+		System.out.println("out success");
+	}
+}

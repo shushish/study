@@ -1,0 +1,5 @@
+package factoryEasy;
+
+public class Login implements Servlet{
+
+}
